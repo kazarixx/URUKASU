@@ -66,3 +66,6 @@ gem 'active_hash'
 gem 'kaminari'
 gem 'ransack'
 gem 'jquery-rails'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
+gem "bootstrap"
