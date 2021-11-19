@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'comments/index'
-  get 'brands/new'
-  get 'brands/index'
-  get 'brands/show'
-  get 'brands/edit'
-  get 'favorites/index'
-  get 'members/show'
-  get 'members/edit'
-  get 'members/confirm'
-  get 'homes/top'
+  root to: 'homes#top'
   get 'homes/about'
+
+  resources :brands do
+    resources :comments, only: [:destroy, :create, :index, :update]
+    resource :favorites, only: [:destroy, :create, :index]
+  end
+  resources :members, only: [:show, :edit, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
