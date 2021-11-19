@@ -2478,3 +2478,2385 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/users/2" for 122.211.70.242 at 2021-11-19 11:43:44 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 318ms (Views: 288.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 11:43:45 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fb72c046d08>
+Did you mean?  search):
+    12:                 </tr>
+    13:             </thead>
+    14:             <tbody>
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= link_to brand_name ,brand_path(brand.id) %></td>
+  
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212347335740'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 11:45:19 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fb72c046d08>
+Did you mean?  search):
+    12:                 </tr>
+    13:             </thead>
+    14:             <tbody>
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= link_to brand_name ,brand_path(brand.id) %></td>
+  
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212289357800'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 11:46:39 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fb72c046d08>
+Did you mean?  search):
+    12:                 </tr>
+    13:             </thead>
+    14:             <tbody>
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= link_to brand_name ,brand_path(brand.id) %></td>
+  
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212285771120'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 11:46:40 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fb72c046d08>
+Did you mean?  search):
+    12:                 </tr>
+    13:             </thead>
+    14:             <tbody>
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= link_to brand_name ,brand_path(brand.id) %></td>
+  
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212248870820'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 11:52:40 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (367.7ms)
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_admin_brand_path' for #<#<Class:0x00007fb72490a2d0>:0x00007fb724912480>
+Did you mean?  new_brand_path):
+    22:                 <% end %>
+    23:             </tbody>
+    24:         </table>
+    25:         <%= link_to "新規作成" , new_admin_brand_path , class: "btn btn-primary" %></br>
+    26:         <%= paginate @brands %>
+    27:         </div>
+    28:     </div>
+  
+app/views/brands/index.html.erb:25:in `_app_views_brands_index_html_erb__377031808068902201_70212284602940'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 11:53:11 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<ActiveRecord::Relation []>):
+    23:             </tbody>
+    24:         </table>
+    25:         <%= link_to "新規作成" , new_brand_path , class: "btn btn-primary" %></br>
+    26:         <%= paginate @brands %>
+    27:         </div>
+    28:     </div>
+    29: </div>
+  
+app/views/brands/index.html.erb:26:in `_app_views_brands_index_html_erb__377031808068902201_70212449726660'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 11:56:18 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 131ms (Views: 121.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 11:56:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (286.0ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_items_path' for #<#<Class:0x00007fb73834ea80>:0x00007fb724bf0e40>):
+     5:      <h3>銘柄登録</h3>
+     6:      
+     7:       <div class="col">
+     8:         <%= form_with model:@item, url:admin_items_path, method: :post, local:true do |f| %>
+     9:         <table class="new-form-table">
+    10:           <tbody>
+    11:             <tr>
+  
+app/views/brands/new.html.erb:8:in `_app_views_brands_new_html_erb___4388633382191354476_70212286123320'
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 11:57:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `item_image_attachment_definition' for #<Brand:0x00007fb7381e2138>):
+    10:           <tbody>
+    11:             <tr>
+    12:               <th>商品画像</th>
+    13:               <td><%= f.attachment_field :item_image %></td>
+    14:             </tr>
+    15:             
+    16:             <tr>
+  
+app/views/brands/new.html.erb:13:in `block in _app_views_brands_new_html_erb___4388633382191354476_70212448617760'
+app/views/brands/new.html.erb:8:in `_app_views_brands_new_html_erb___4388633382191354476_70212448617760'
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:01:58 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Genre):
+    25:             
+    26:             <tr>
+    27:               <th>JANコード</th>
+    28:               <td><%= f.text_field :genre_id, Genre.all ,:id, :name, include_blank: "--選択してください--" %></td>
+    29:             </tr>
+    30:             
+    31:             <tr>
+  
+app/views/brands/new.html.erb:28:in `block in _app_views_brands_new_html_erb___4388633382191354476_70212288777320'
+app/views/brands/new.html.erb:8:in `_app_views_brands_new_html_erb___4388633382191354476_70212288777320'
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:02:49 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:10:33 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4PYSSIGDaFYFom5Ws7aMlWJwP3CyI/odDf+3i+LrDZt3rxryZUp6tqE2GnTv1mAwz08RIGf06uDaQq/iNIzkw==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7203cd028 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-v6f5j2.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリスフーズ（株）のお米です。\r\n密封新鮮パックで美味しい！"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"brands", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/brands_controller.rb:9:in `create'
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:12:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4PYSSIGDaFYFom5Ws7aMlWJwP3CyI/odDf+3i+LrDZt3rxryZUp6tqE2GnTv1mAwz08RIGf06uDaQq/iNIzkw==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb72636fd00 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-1gxzn4i.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリスフーズ（株）のお米です。\r\n密封新鮮パックで美味しい！"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 19ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:12:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:12:50 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:12:51 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:13:34 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZ3nghR4nzz66QkpFWFqg+Z1FuxFn9Kez12/zYTsDfOcJB36kyrDtwwoHBpvo2lbqLgio9dQ4w6IgZH8m7FI9A==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7386089d8 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-sgl7mg.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリスフーズ（株）の商品\r\n密封新鮮パックで美味しい"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:13:34 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 79ms (Views: 78.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:16:16 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (17.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 308ms (Views: 244.9ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:16:41 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRgsNvm4qoOOiO8/EwyG1nahjgq4gOJ8O4/ulnuyKk3YodZOfur2CHhJ+gxpzoUOOGy6RSpP0+x8U8CnZO9vSg==", "brand"=>{"brand_image"=>"{}", "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリスフーズ（株）"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 82ms (Views: 66.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:20:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BJympqI6qIG3SB4chXjtojzfrKTcGitT7++npfIt7PSTxa4cRvO6YRPcaj7ZGAEHkeCC9AnNO644Ur/MJEoFg==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7264ec138 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-1i84dvd.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリス"}, "commit"=>"新規登録"}
+Unpermitted parameter: :brand_image
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 136ms (Views: 70.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 122.211.70.242 at 2021-11-19 12:23:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 122.211.70.242 at 2021-11-19 12:23:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:23:49 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 70ms (Views: 64.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:23:51 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 67ms (Views: 59.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:24:03 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"APIiY4Qos2tZg2BksEt9LC8o+FTT+K6USta/ob2hySrlS9gbA3rv4K9CdVfKiX70YeXMG0E3nwQNCpGQovyMLQ==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7381e0db0 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-1sbhx8u.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリス"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/brands_controller.rb:8
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:24:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:24:07 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:27:12 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 100ms (Views: 85.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:27:24 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zU49nKmf4xcFHZ0cxenl6CXnx6S2s6xZhkC1h4cTd3T7E1m+QgzHXIePzMxMmGZas1M7HfXk8BpxHkHmIEro0Q==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00000000045e0cc8 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-pnqdrk.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"airisu"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `brand' for #<BrandsController:0x00000000045ca108>
+Did you mean?  @brand
+               rand
+               srand):
+  
+app/controllers/brands_controller.rb:8:in `create'
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:27:59 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zU49nKmf4xcFHZ0cxenl6CXnx6S2s6xZhkC1h4cTd3T7E1m+QgzHXIePzMxMmGZas1M7HfXk8BpxHkHmIEro0Q==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7252edae0 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-125lt77.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリス"}, "commit"=>"新規登録"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[36mBrand Create (25.2ms)[0m  [1m[32mINSERT INTO "brands" ("user_id", "prefecture_id", "brand_name", "jan", "body", "brand_image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["prefecture_id", 4], ["brand_name", "ひとめぼれ"], ["jan", "4967576149785"], ["body", "アイリス"], ["brand_image_id", "89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4"], ["created_at", "2021-11-19 12:27:59.806287"], ["updated_at", "2021-11-19 12:27:59.806287"]]
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 74ms (ActiveRecord: 30.4ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:27:59 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (398.8ms)
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `brand_name' for #<#<Class:0x00007fb72020c8b0>:0x00007fb720222e30>
+Did you mean?  brand_path):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= link_to brand_name ,brand_path(brand.id) %></td>
+    19:                     <td><%= brand.prefecture_id %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212247382040'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212247382040'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:28:42 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (370.6ms)
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `brand_name' for #<#<Class:0x00007fb72020c8b0>:0x00007fb720412330>
+Did you mean?  brand_path):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= link_to brand_name , brand_path(brand) %></td>
+    19:                     <td><%= brand.prefecture_id %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212248442480'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212248442480'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:28:53 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (283.2ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `brand_name' for #<#<Class:0x00007fb72020c8b0>:0x00007fb720337b18>
+Did you mean?  brand_path):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= link_to brand_name , brand_path %></td>
+    19:                     <td><%= brand.prefecture_id %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212248002960'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212248002960'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:29:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:29:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:29:21 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 29.1ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:30:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `prefecture_name' for #<Brand:0x00000000048f1138>
+Did you mean?  prefecture_id
+               prefecture_id?
+               prefecture_id=):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_37207860'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_37207860'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:30:25 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212247595500'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212247595500'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:30:26 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212451446280'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212451446280'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:30:42 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:30:43 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:30:43 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.6ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:30:59 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id(:name) %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212248803760'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212248803760'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:31:10 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212298881220'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212298881220'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:36:00 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212248006460'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212248006460'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:36:01 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212383121240'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212383121240'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:36:02 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212299803280'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212299803280'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:36:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212451641260'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212451641260'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:36:17 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212299671500'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212299671500'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:39:08 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `prefecture_name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.prefecture_name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212451950800'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212451950800'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:39:09 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `prefecture_name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.prefecture_name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212347112500'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212347112500'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:39:10 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `prefecture_name' for 4:Integer):
+    15:                 <% @brands.each do |brand| %>
+    16:                 <tr>
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '50x50', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <td><%= brand.prefecture_id.prefecture_name %></td>
+    19:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    20:                     <td><%= brand.jan %></td>
+    21:                 </tr>
+  
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212450646520'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212450646520'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:39:29 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:39:29 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:39:29 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 16.4ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:41:09 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `prefecture_id' for #<Brand::ActiveRecord_Relation:0x00007fb7383e2ff0>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:41:25 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `prefecture_id' for #<Brand::ActiveRecord_Relation:0x00007fb724b37558>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:41:25 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `prefecture_id' for #<Brand::ActiveRecord_Relation:0x00007fb72c1ea588>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:41:36 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `prefecture_id' for #<Class:0x00007fb73864a6f8>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:41:37 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `prefecture_id' for #<Class:0x00007fb73864a6f8>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:41:54 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `prefecture_id' for #<BrandsController:0x00007fb7202e0750>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:41:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `prefecture_id' for #<BrandsController:0x000000000437e520>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:44:29 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `prefecture_id' for nil:NilClass
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:44:30 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `prefecture_id' for nil:NilClass
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:45:34 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `prefecture_id' for nil:NilClass
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:45:35 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `prefecture_id' for nil:NilClass
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:50:30 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `prefecture_id' for #<Brand::ActiveRecord_Relation:0x00007fb72506a9a8>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:50:31 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `prefecture_id' for #<Brand::ActiveRecord_Relation:0x00007fb7202b2530>
+Did you mean?  presence_in):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:50:42 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `brand' for #<BrandsController:0x00007fb7385d9de0>
+Did you mean?  rand
+               @brands
+               srand):
+  
+app/controllers/brands_controller.rb:23:in `index'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:51:27 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/controllers/brands_controller.rb:23: syntax error, unexpected '<', expecting end
+    <% @brands.each do |brand| %>
+    ^
+/home/ec2-user/environment/portfolio/app/controllers/brands_controller.rb:23: syntax error, unexpected do, expecting end
+    <% @brands.each do |brand| %>
+                    ^~):
+  
+app/controllers/brands_controller.rb:23: syntax error, unexpected '<', expecting end
+app/controllers/brands_controller.rb:23: syntax error, unexpected do, expecting end
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:52:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/brands_controller.rb:23
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 84ms (Views: 68.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:52:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:52:05 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 15.6ms
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:52:13 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:52:13 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:52:14 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.8ms
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:53:04 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:53:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/brands_controller.rb:23
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 81ms (Views: 78.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:53:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:53:05 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.6ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:53:14 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/brands_controller.rb:23
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:53:14 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:53:14 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 17.2ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:53:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/brands_controller.rb:23
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:53:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:53:15 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 17.4ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:53:18 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/brands_controller.rb:23
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:53:18 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:53:18 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.4ms
+
+Started GET "/brands/new" for 122.211.70.242 at 2021-11-19 12:53:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:53:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:53:22 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 17.8ms
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 12:55:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nnZ2Hj0twGZJWQfi/rsYwP/gbRwzQFExPCUDnsJEUax7z4xmun+c7b+YEtGEeRsYsS1ZU6GPYKF7+S2v3RkUqw==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7202ce0f0 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-510903.jpeg>, @original_filename="新潟県産コシヒカリ.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"\xE6\x96\xB0\xE6\xBD\x9F\xE7\x9C\x8C\xE7\x94\xA3\xE3\x82\xB3\xE3\x82\xB7\xE3\x83\x92\xE3\x82\xAB\xE3\x83\xAA.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "prefecture_id"=>"15", "brand_name"=>"コシヒカリ", "jan"=>"4995856983026", "body"=>"もちもち"}, "commit"=>"新規登録"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[36mBrand Create (1.0ms)[0m  [1m[32mINSERT INTO "brands" ("user_id", "prefecture_id", "brand_name", "jan", "body", "brand_image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["prefecture_id", 15], ["brand_name", "コシヒカリ"], ["jan", "4995856983026"], ["body", "もちもち"], ["brand_image_id", "69dac9c861df43473914991707d151f0ad571dce2305b7b5d1eaf56f80e7"], ["created_at", "2021-11-19 12:55:56.172805"], ["updated_at", "2021-11-19 12:55:56.172805"]]
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 16ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:55:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/brands_controller.rb:23
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:55:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/7b64622a0769c26bc2a3138c9e3ce58e13be2307/store/69dac9c861df43473914991707d151f0ad571dce2305b7b5d1eaf56f80e7/brand_image" for 122.211.70.242 at 2021-11-19 12:55:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:55:56 +0000] GET "/7b64622a0769c26bc2a3138c9e3ce58e13be2307/store/69dac9c861df43473914991707d151f0ad571dce2305b7b5d1eaf56f80e7/brand_image" 200 5.0ms
+
+Refile::App: [2021-11-19 12:55:56 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 28.2ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 12:55:59 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 91ms (Views: 89.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:56:00 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:56:00 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 15.5ms
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:56:02 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:56:02 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.9ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:58:07 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '500x500', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <% @brands.each do |brand| %>
+    19:                       @prefecture = Prefecture.find_by(id: brand.prefecture_id)
+    20:                       <td><%= @prefecture.name %></td>
+    21:                     <% end %>
+    22:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    23:                     <td><%= brand.jan %></td>
+  
+app/views/brands/index.html.erb:20:in `block (2 levels) in _app_views_brands_index_html_erb__377031808068902201_70212290156060'
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212290156060'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212290156060'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:58:16 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (303.5ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `prefecture' for #<#<Class:0x00007fb7253a19a0>:0x00007fb7384e23d8>
+Did you mean?  presence):
+    17:                     <td><%= attachment_image_tag brand, :brand_image, :size => '500x500', fallback: "no_image.jpeg", size: '50x50' %></td>
+    18:                     <% @brands.each do |brand| %>
+    19:                       @prefecture = Prefecture.find_by(id: brand.prefecture_id)
+    20:                       <td><%= prefecture.name %></td>
+    21:                     <% end %>
+    22:                     <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+    23:                     <td><%= brand.jan %></td>
+  
+app/views/brands/index.html.erb:20:in `block (2 levels) in _app_views_brands_index_html_erb__377031808068902201_70212450195060'
+app/views/brands/index.html.erb:18:in `block in _app_views_brands_index_html_erb__377031808068902201_70212450195060'
+app/views/brands/index.html.erb:15:in `_app_views_brands_index_html_erb__377031808068902201_70212450195060'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:58:43 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:58:43 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:58:43 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 20.7ms
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 12:59:14 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:59:14 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:59:14 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.0ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 12:59:57 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 12:59:58 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 12:59:58 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 16.6ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:05:12 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:26
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected tLABEL
+....append=( attachment_image_tag:@brand, :brand_image, size:'3...
+...          ^~~~~~~~~~~~~~~~~~~~~
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...image_tag:@brand, :brand_image, size:'300x300',fallback: "no...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+..., :brand_image, size:'300x300',fallback: "no_image.jpeg", si...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+...300',fallback: "no_image.jpeg", size: '50x50' );@output_buff...
+...                              ^):
+  
+app/views/brands/show.html.erb:5: syntax error, unexpected tLABEL
+app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:05:41 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:05:41 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:05:41 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.9ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:05:42 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:26
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected tLABEL
+....append=( attachment_image_tag:@brand, :brand_image, size:'3...
+...          ^~~~~~~~~~~~~~~~~~~~~
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...image_tag:@brand, :brand_image, size:'300x300',fallback: "no...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+..., :brand_image, size:'300x300',fallback: "no_image.jpeg", si...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+...300',fallback: "no_image.jpeg", size: '50x50' );@output_buff...
+...                              ^):
+  
+app/views/brands/show.html.erb:5: syntax error, unexpected tLABEL
+app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/brands/show.html.erb:5: syntax error, unexpected ',', expecting ')'
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:05:42 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:05:42 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.4ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:06:01 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:26
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 4:Integer):
+    10:           <tbody>
+    11:             <tr>
+    12:               <th>産地名</th>
+    13:               <td><%= @brand.prefecture_id.name %></td>
+    14:             </tr>
+    15: 
+    16:             <tr>
+  
+app/views/brands/show.html.erb:13:in `_app_views_brands_show_html_erb__1302115243637326228_70212447763540'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:06:24 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:26
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (270.5ms)
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `brand' for #<#<Class:0x00000000026e6ac0>:0x000000000345d820>
+Did you mean?  @brand
+               rand
+               srand):
+    10:           <tbody>
+    11:             <tr>
+    12:               <th>産地名</th>
+    13:               <td><%= Prefecture.find_by(id: brand.prefecture_id).name %></td>
+    14:             </tr>
+    15: 
+    16:             <tr>
+  
+app/views/brands/show.html.erb:13:in `_app_views_brands_show_html_erb__1302115243637326228_28427940'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:06:26 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:26
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (272.2ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `brand' for #<#<Class:0x00000000026e6ac0>:0x00007fb7204a4438>
+Did you mean?  @brand
+               rand
+               srand):
+    10:           <tbody>
+    11:             <tr>
+    12:               <th>産地名</th>
+    13:               <td><%= Prefecture.find_by(id: brand.prefecture_id).name %></td>
+    14:             </tr>
+    15: 
+    16:             <tr>
+  
+app/views/brands/show.html.erb:13:in `_app_views_brands_show_html_erb__1302115243637326228_70212248742600'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:06:34 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:26
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Brand:0x00007fb72c18f958>):
+    15: 
+    16:             <tr>
+    17:               <th>銘柄名</th>
+    18:               <td><%= @brand.name %></td>
+    19:             </tr>
+    20: 
+    21:             <tr>
+  
+app/views/brands/show.html.erb:18:in `_app_views_brands_show_html_erb__1302115243637326228_70212347785640'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:06:44 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:26
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:06:45 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:06:45 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.7ms
+
+Started GET "/brands/1/edit" for 122.211.70.242 at 2021-11-19 13:06:49 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:06:49 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:06:49 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 19.6ms
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:06:52 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:06:52 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 13.3ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:09:27 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 105ms (Views: 86.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:09:27 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:09:27 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.1ms
+
+Started GET "/brands/1/edit" for 122.211.70.242 at 2021-11-19 13:09:28 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:29
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:09:28 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:09:28 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 15.3ms
+
+Started GET "/users/2" for 122.211.70.242 at 2021-11-19 13:12:48 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 83ms (Views: 80.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:12:51 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:12:51 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:12:51 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.4ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:12:52 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:12:52 +0000
+  ↳ app/controllers/brands_controller.rb:25
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.0ms)
+Refile::App: [2021-11-19 13:12:52 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 13.2ms
+
+Completed 200 OK in 81ms (Views: 74.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:12:52 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:12:52 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.1ms
+
+Started GET "/users/2" for 122.211.70.242 at 2021-11-19 13:12:55 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:12:55 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:12:55 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 15.0ms
+
+Completed 200 OK in 95ms (Views: 93.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:12:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:12:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (5.1ms)
+Refile::App: [2021-11-19 13:12:56 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 11.7ms
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 76ms (Views: 71.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:12:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:12:56 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.7ms
+
+Started GET "/brands/2" for 122.211.70.242 at 2021-11-19 13:12:57 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:12:57 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:12:57 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 16.6ms
+
+Started GET "/users/2" for 122.211.70.242 at 2021-11-19 13:13:04 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 81ms (Views: 78.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:13:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:13:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+Refile::App: [2021-11-19 13:13:05 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 19.2ms
+
+  Rendered brands/index.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:13:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:13:05 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 15.0ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:13:06 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:13:06 +0000
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (6.3ms)
+Refile::App: [2021-11-19 13:13:06 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.5ms
+
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:13:06 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:13:06 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.6ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:13:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 81ms (Views: 78.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:13:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:13:47 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.5ms
+
+Started GET "/brands/1/edit" for 122.211.70.242 at 2021-11-19 13:13:48 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:29
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:13:49 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:13:49 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.9ms
+
+Started POST "/brands" for 122.211.70.242 at 2021-11-19 13:14:16 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3YSPaM+sC78hTpP1jtRPq3rWSJsv5pYueKE7S60Mhgo4PXUQSP5XNNePhsb0FkxzNBt81L0pp74/fRV6slHDDQ==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb738278778 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-zew5wf.HEIC>, @original_filename="IMG_1266.HEIC", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.HEIC\"\r\nContent-Type: image/heic\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリス"}, "commit"=>"編集保存"}
+  [1m[36mUser Load (27.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[36mBrand Create (115.5ms)[0m  [1m[32mINSERT INTO "brands" ("user_id", "prefecture_id", "brand_name", "jan", "body", "brand_image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["prefecture_id", 4], ["brand_name", "ひとめぼれ"], ["jan", "4967576149785"], ["body", "アイリス"], ["brand_image_id", "0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5"], ["created_at", "2021-11-19 13:14:18.587906"], ["updated_at", "2021-11-19 13:14:18.587906"]]
+  ↳ app/controllers/brands_controller.rb:9
+  [1m[35m (196.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/brands_controller.rb:9
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 1899ms (ActiveRecord: 339.5ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:14:19 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (66.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (198.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1398ms (Views: 1277.4ms | ActiveRecord: 66.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:14:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" for 122.211.70.242 at 2021-11-19 13:14:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:14:21 +0000] GET "/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" 200 22.9ms
+
+Refile::App: [2021-11-19 13:14:21 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 35.5ms
+
+Started GET "/brands/3" for 122.211.70.242 at 2021-11-19 13:15:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 85ms (Views: 82.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" for 122.211.70.242 at 2021-11-19 13:15:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:15:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:15:22 +0000] GET "/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" 200 26.7ms
+
+Refile::App: [2021-11-19 13:15:22 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 24.9ms
+
+Started GET "/brands/3/edit" for 122.211.70.242 at 2021-11-19 13:15:23 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:29
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" for 122.211.70.242 at 2021-11-19 13:15:23 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:15:24 +0000] GET "/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" 200 19.6ms
+
+Started PATCH "/brands" for 122.211.70.242 at 2021-11-19 13:15:30 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [PATCH] "/brands"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/brands" for 122.211.70.242 at 2021-11-19 13:15:54 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [PATCH] "/brands"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:15:55 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:15:55 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" for 122.211.70.242 at 2021-11-19 13:15:55 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:15:55 +0000] GET "/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" 200 13.4ms
+
+Refile::App: [2021-11-19 13:15:55 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 24.6ms
+
+Started GET "/brands/3" for 122.211.70.242 at 2021-11-19 13:15:57 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" for 122.211.70.242 at 2021-11-19 13:15:57 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:15:57 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:15:57 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 20.0ms
+
+Refile::App: [2021-11-19 13:15:57 +0000] GET "/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" 200 29.9ms
+
+Started GET "/brands/3/edit" for 122.211.70.242 at 2021-11-19 13:15:58 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:29
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 87ms (Views: 85.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" for 122.211.70.242 at 2021-11-19 13:15:58 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:15:58 +0000] GET "/84f76b71206f65cc197b24744f1205ff8ccc87f4/store/0e9e49eea7ca86e4c44ce5f0f2f484580fed386766ef06b26a0ffe1f9ce5/brand_image" 200 13.6ms
+
+Started PATCH "/brands/3" for 122.211.70.242 at 2021-11-19 13:16:03 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJPeanWmshIUI+NB9cOSLq4Cx61ob4KHFIORExx1GcnvFkEFz4ys6NWPrGXF4/SsR4U3yeIjy/j1jeHxOalHgA==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7265a8860 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-1ykuoki.JPG>, @original_filename="IMG_3967.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_3967.JPG\"\r\nContent-Type: image/jpeg\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリス"}, "commit"=>"編集保存", "id"=>"3"}
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `brand' for #<BrandsController:0x00007fb7265a8fb8>
+Did you mean?  rand
+               srand):
+  
+app/controllers/brands_controller.rb:33:in `update'
+Started PATCH "/brands/3" for 122.211.70.242 at 2021-11-19 13:18:12 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2IWt6CswZ4MdTAfqE+M6jGNX7Kw3i1ESBD6fdBWb0bju2MnKwKNDyJ/eVjqakrk+9eMQFXTcDVHzYGsVssJOHQ==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb738104450 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-1un3kft.JPG>, @original_filename="IMG_3967.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_3967.JPG\"\r\nContent-Type: image/jpeg\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリス"}, "commit"=>"編集保存", "id"=>"3"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[36mBrand Update (0.9ms)[0m  [1m[33mUPDATE "brands" SET "brand_image_id" = ?, "updated_at" = ? WHERE "brands"."id" = ?[0m  [["brand_image_id", "4a4157b8b987c0c3f4cd7ae6042bf09b959e823ae96e2e2bfd3950e40618"], ["updated_at", "2021-11-19 13:18:12.909133"], ["id", 3]]
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/brands_controller.rb:34
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 44ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:18:12 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 166ms (Views: 164.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:18:13 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/b6ec470d3e27da9709721356e6a67e3234e980d1/store/4a4157b8b987c0c3f4cd7ae6042bf09b959e823ae96e2e2bfd3950e40618/brand_image" for 122.211.70.242 at 2021-11-19 13:18:13 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:18:13 +0000] GET "/b6ec470d3e27da9709721356e6a67e3234e980d1/store/4a4157b8b987c0c3f4cd7ae6042bf09b959e823ae96e2e2bfd3950e40618/brand_image" 200 11.5ms
+
+Refile::App: [2021-11-19 13:18:13 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 20.3ms
+
+Started GET "/brands/3" for 122.211.70.242 at 2021-11-19 13:18:45 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 123ms (Views: 121.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:18:45 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:18:45 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 14.5ms
+
+Started GET "/brands/3/edit" for 122.211.70.242 at 2021-11-19 13:18:46 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:29
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/brands/3" for 122.211.70.242 at 2021-11-19 13:20:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5U57PVWITLKMfiEjFdPTZtxCu79Gn3yvr8EJEwkyyxiOy+RS76JSSE3Sbgcl87XkNcVL28zTNdBOz3nxLO6VUQ==", "brand"=>{"brand_image"=>"{}", "prefecture_id"=>"1", "brand_name"=>"ゆめぴりか", "jan"=>"4907358030450", "body"=>"アミロースが低いことによる「ほどよい粘り」と、タンパク質の低さによる「炊きあがりの見た目」が高く評価されているお米です。"}, "commit"=>"編集保存", "id"=>"3"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[36mBrand Update (1.0ms)[0m  [1m[33mUPDATE "brands" SET "prefecture_id" = ?, "brand_name" = ?, "jan" = ?, "body" = ?, "brand_image_id" = ?, "updated_at" = ? WHERE "brands"."id" = ?[0m  [["prefecture_id", 1], ["brand_name", "ゆめぴりか"], ["jan", "4907358030450"], ["body", "アミロースが低いことによる「ほどよい粘り」と、タンパク質の低さによる「炊きあがりの見た目」が高く評価されているお米です。"], ["brand_image_id", "4a4157b8b987c0c3f4cd7ae6042bf09b959e823ae96e2e2bfd3950e40618"], ["updated_at", "2021-11-19 13:20:21.411152"], ["id", 3]]
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/brands_controller.rb:34
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 16ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:20:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:20:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:20:21 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 19.1ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:20:25 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:20:26 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:20:26 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 19.6ms
+
+Started GET "/brands/1/edit" for 122.211.70.242 at 2021-11-19 13:20:27 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:29
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" for 122.211.70.242 at 2021-11-19 13:20:27 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:20:27 +0000] GET "/4dda7956449836e3ebdd00d8c9e1a3b78ca36a00/store/89514126a174a201b952463a94e959b7751e2fa7ac53528b4adec0b6fbe4/brand_image" 200 19.3ms
+
+Started PATCH "/brands/1" for 122.211.70.242 at 2021-11-19 13:22:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NpAVKfU75rb31YjRzB6lF7jc6amzPXtzBXuuwX2KH0tW9mUbXrZGO3saftSkiY+Iiv8Z8d2m69o4FmDVWYhEOA==", "brand"=>{"brand_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb7254e3430 @tempfile=#<Tempfile:/tmp/RackMultipart20211119-2532-mjr6c1.jpeg>, @original_filename="IMG_1266.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"brand[brand_image]\"; filename=\"IMG_1266.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "prefecture_id"=>"4", "brand_name"=>"ひとめぼれ", "jan"=>"4967576149785", "body"=>"アイリス"}, "commit"=>"編集保存", "id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[36mBrand Update (1.0ms)[0m  [1m[33mUPDATE "brands" SET "brand_image_id" = ?, "updated_at" = ? WHERE "brands"."id" = ?[0m  [["brand_image_id", "68bc43380d7b3e833dd63f9a8510ce5eb2129228eafd4159a9ec793e0eef"], ["updated_at", "2021-11-19 13:22:21.064088"], ["id", 1]]
+  ↳ app/controllers/brands_controller.rb:34
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/brands_controller.rb:34
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands
+Completed 302 Found in 20ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:22:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/fd5f98e5f700c678f8caed1b44cf2eb56b01e0dd/store/68bc43380d7b3e833dd63f9a8510ce5eb2129228eafd4159a9ec793e0eef/brand_image" for 122.211.70.242 at 2021-11-19 13:22:21 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-19 13:22:21 +0000] GET "/fd5f98e5f700c678f8caed1b44cf2eb56b01e0dd/store/68bc43380d7b3e833dd63f9a8510ce5eb2129228eafd4159a9ec793e0eef/brand_image" 200 16.3ms
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:22:28 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:07 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:18 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:19 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:26 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:40 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 82ms (Views: 79.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:41 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:23:58 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 78ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:24:00 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:24:05 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:24:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:24:45 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:30
+  Rendered brands/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:25:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:25:16 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:25:30 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:25:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.3ms)
+
+
