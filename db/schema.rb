@@ -26,7 +26,8 @@ ActiveRecord::Schema.define(version: 2021_11_19_075627) do
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "brand_id"
-    t.text "comment"
+    t.text "comment", null: false
+    t.float "rate", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
