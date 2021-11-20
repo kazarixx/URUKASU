@@ -37,6 +37,10 @@
           </tbody>
         </table>
         </div>
+        <!--いいね-->
+        <div id="brand_<%= @brand.id %>">
+          <p class="favorite-btn"><%= render "favorites/favorite-btn", brand: @brand %></td>
+        </div>
         <!--コメント欄-->
         <div class="row">
           <p>コメント件数：<%= @brand.comments.count %></p>
