@@ -12630,3 +12630,83 @@ Processing by FavoritesController#destroy as JS
 Completed 200 OK in 22ms (Views: 9.4ms | ActiveRecord: 4.2ms)
 
 
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-20 09:40:01 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."brand_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["brand_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/brand.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/favorites/_favorite-btn.html.erb:4
+  Rendered favorites/_favorite-btn.html.erb (8.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:47
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:49
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:49
+  Rendered brands/show.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 443ms (Views: 411.4ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/brands/1/favorites" for 122.211.70.242 at 2021-11-20 09:40:03 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as JS
+  Parameters: {"brand_id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:8
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:8
+  [1m[36mFavorite Create (0.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "brand_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["brand_id", 1], ["created_at", "2021-11-20 09:40:03.567352"], ["updated_at", "2021-11-20 09:40:03.567352"]]
+  ↳ app/controllers/favorites_controller.rb:8
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:8
+  Rendering favorites/create.js.erb
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."brand_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["brand_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/brand.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/favorites/_favorite-btn.html.erb:2
+  Rendered favorites/_favorite-btn.html.erb (4.9ms)
+  Rendered favorites/create.js.erb (8.2ms)
+Completed 200 OK in 36ms (Views: 12.3ms | ActiveRecord: 6.0ms)
+
+
+Started DELETE "/brands/1/favorites" for 122.211.70.242 at 2021-11-20 09:40:04 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#destroy as JS
+  Parameters: {"brand_id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:13
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."brand_id" = ? LIMIT ?[0m  [["user_id", 2], ["brand_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14
+  [1m[36mFavorite Destroy (0.2ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 79]]
+  ↳ app/controllers/favorites_controller.rb:14
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/favorites_controller.rb:14
+  Rendering favorites/destroy.js.erb
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."brand_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["brand_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/brand.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/favorites/_favorite-btn.html.erb:4
+  Rendered favorites/_favorite-btn.html.erb (3.3ms)
+  Rendered favorites/destroy.js.erb (6.2ms)
+Completed 200 OK in 25ms (Views: 9.9ms | ActiveRecord: 4.6ms)
+
+
