@@ -26,6 +26,23 @@
               <th>銘柄説明</th>
               <td><%= @brand.body %></td>
             </tr>
+
+            <tr>
+              <th></th>
+              <td class="average-review-rating" data-score=<%= @average_rate %>></div>
+                <script>
+                  $('.average-review-rating').raty({
+                    readOnly: true,
+                    starOn: "<%= asset_path('star-on.png') %>",
+                    starOff: "<%= asset_path('star-off.png') %>",
+                    starHalf: "<%= asset_path('star-half.png') %>",
+                    score: function() {
+                      return $(this).attr('data-score')
+                    }
+                  });
+                </script>
+              </td>
+            </tr>
             <% if @brand.user_id == current_user.id %>
             <tr>
                 <td><%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success" %></td>
@@ -49,9 +66,31 @@
         <div class="row">
           <%= form_with model:[@brand, @comment], remote: true do |f| %>
             <%= f.text_area :comment, rows:'5', placeholder: "コメントしてね" %>
+             <div id="rating-form">
+            <%= f.label :rate%>
+            <%# scoreNameの値をhidden_fieldでカラムに送っている %>
+            <%= f.hidden_field :rate, :value => 'score' %>
+            </div>
             <%= f.submit "送信する" %>
           <% end %>
         </div>
+        <!--raty-->
+        <script>
+          $('#rating-form').raty({
+              starOn: "<%= asset_path('star-on.png') %>",
+              starOff: "<%= asset_path('star-off.png') %>",
+              scoreName: 'comment[rate]'
+          });
+        </script>
+        <script>
+          $('.review-rating').raty({
+          readOnly: true,
+          score: function() {
+            return $(this).attr('data-score');
+          },
+          path: '/assets/'
+          });
+        </script>
         </div>
     </div>
 </div>
