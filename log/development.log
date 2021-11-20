@@ -4860,3 +4860,1045 @@ Processing by BrandsController#index as HTML
 Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/brands" for 122.211.70.242 at 2021-11-19 13:58:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/brands/index.html.erb:15
+  Rendered brands/index.html.erb within layouts/application (22.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 458ms (Views: 441.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:58:17 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (1.4ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (37.9ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    47:         <% end %>
+    48:         </div>
+    49:         <div>
+    50:         <%= form_with(model:[@brand, @comment], local: true) do |f| %>
+    51:           <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
+    52:           <%= f.submit "送信する" %>
+    53:         <% end %>
+  
+app/views/brands/show.html.erb:50:in `_app_views_brands_show_html_erb___2799737177177782303_69944957944300'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 13:59:14 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 92ms (Views: 69.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:00:43 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 109ms (Views: 87.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:05:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:06:33 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:06:35 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:06:36 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:06:37 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:06:46 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:06:47 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:07:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:54: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:58: syntax error, unexpected end, expecting end-of-input
+         end 
+         ^~~):
+  
+app/views/brands/show.html.erb:54: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:58: syntax error, unexpected end, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:07:16 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:54: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:58: syntax error, unexpected end, expecting end-of-input
+         end 
+         ^~~):
+  
+app/views/brands/show.html.erb:54: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:58: syntax error, unexpected end, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:07:17 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:54: syntax error, unexpected ')', expecting end
+...@brand, @comment], local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:58: syntax error, unexpected end, expecting end-of-input
+         end 
+         ^~~):
+  
+app/views/brands/show.html.erb:54: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:58: syntax error, unexpected end, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:08:02 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...h model: @comment, local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:08:03 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...h model: @comment, local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:08:03 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+...h model: @comment, local: true) do |f| @output_buffer.safe_a...
+...                              ^
+/home/ec2-user/environment/portfolio/app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/brands/show.html.erb:55: syntax error, unexpected ')', expecting end
+app/views/brands/show.html.erb:63: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:08:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 96ms (Views: 93.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/brands/1/comments" for 122.211.70.242 at 2021-11-19 14:08:31 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rLQNOu3M4lebZc8GqCRHl6NNB45smP4bsYF6txdY6zqa6WkYBl/GHBn3ntYhVcQlNfn7Ny/PolhG347WsAF0nw==", "comment"=>{"comment"=>"大好き"}, "commit"=>"送信する", "brand_id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "brand_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["brand_id", 1], ["comment", "大好き"], ["created_at", "2021-11-19 14:08:31.227932"], ["updated_at", "2021-11-19 14:08:31.227932"]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:10
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands/1
+Completed 302 Found in 24ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:08:31 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The asset "sample-author1.jpg" is not present in the asset pipeline.
+):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= image_tag('sample-author1.jpg') %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69944966330440'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69944966330440'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:11:34 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (393.5ms)
+Completed 500 Internal Server Error in 419ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `brand' for #<#<Class:0x00007f3aa8ec2a40>:0x00007f3aa8ecc838>
+Did you mean?  @brand
+               rand
+               srand):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= attachment_image_tag User.find_by(id: brand.comments_id).name, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpeg", size: '100x100' %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69944959427700'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69944959427700'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:11:48 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_id' for #<Brand:0x00007f3ab0677018>
+Did you mean?  comment_ids
+               comment_ids=
+               comments
+               comments=):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= attachment_image_tag User.find_by(id: @brand.comments_id).name, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpeg", size: '100x100' %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69945022197340'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69945022197340'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:11:59 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (341.5ms)
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comments_id' for #<#<Class:0x00007f3aa8ec2a40>:0x00007f3ab0234ca8>
+Did you mean?  comment):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= attachment_image_tag User.find_by(id: comments_id).name, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpeg", size: '100x100' %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69945019968740'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69945019968740'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:12:06 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (307.9ms)
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comment_id' for #<#<Class:0x00007f3aa8ec2a40>:0x00007f3aa9c45488>
+Did you mean?  comment
+               @comment):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= attachment_image_tag User.find_by(id: comment_id).name, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpeg", size: '100x100' %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69944966524540'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69944966524540'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:12:45 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (383.0ms)
+Completed 500 Internal Server Error in 387ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comment_id' for #<#<Class:0x00007f3aa8ec2a40>:0x00007f3aa9c175d8>
+Did you mean?  comment
+               @comment):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= attachment_image_tag User.find_by(id: comment_id).name, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpeg", size: '100x100' %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69944966430560'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69944966430560'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:12:53 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  Rendered brands/show.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= attachment_image_tag User.find_by(id: comment).name, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpeg", size: '100x100' %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69944966485220'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69944966485220'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:13:10 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  Rendered brands/show.html.erb within layouts/application (299.2ms)
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comment_id' for #<#<Class:0x00007f3aa8ec2a40>:0x00007f3aa8c4b078>
+Did you mean?  comment
+               @comment):
+    41:         <div class="row">
+    42:         <p>コメント件数：<%= @brand.comments.count %></p>
+    43:         <% @brand.comments.each do |comment| %>
+    44:           <p><%= attachment_image_tag User.find_by(comment_id).name, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpeg", size: '100x100' %></p>
+    45:           <%= comment.user.name %>
+    46:           <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    47:           <% if comment.user == current_user %>
+  
+app/views/brands/show.html.erb:44:in `block in _app_views_brands_show_html_erb___2799737177177782303_69944958157620'
+app/views/brands/show.html.erb:43:in `_app_views_brands_show_html_erb___2799737177177782303_69944958157620'
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:13:34 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  Rendered brands/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:14:33 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 82ms (Views: 79.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:14:34 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:14:35 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:15:02 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:16:39 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  Rendered brands/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/brands/1/comments" for 122.211.70.242 at 2021-11-19 14:16:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Hgq4rxRtTFshWDxsLidLVQTJV1ojiDafGlGkDxfabXaJU7AV8KReu4XMSE5yR6fwqfZ5CvZfJmLN7Lxmwb2EA==", "comment"=>{"comment"=>"やわらかい"}, "commit"=>"送信する", "brand_id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "brand_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["brand_id", 1], ["comment", "やわらかい"], ["created_at", "2021-11-19 14:16:56.283720"], ["updated_at", "2021-11-19 14:16:56.283720"]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:10
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands/1
+Completed 302 Found in 16ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:16:56 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  Rendered brands/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:17:28 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  Rendered brands/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:18:22 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  Rendered brands/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:18:52 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  Rendered brands/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:19:44 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  Rendered brands/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:19:45 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:46
+  Rendered brands/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:20:14 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 82ms (Views: 79.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:20:15 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:20:32 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/brands/1/comments/1" for 122.211.70.242 at 2021-11-19 14:21:33 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YGYYVfRTHMslm9bzDsEgXN17Xb7+aYJa543w/5avaJRWO3x3H8A4gKcJhyOHsKPuS8+hB70+3hkQ0wSeMfb3MQ==", "brand_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:18
+  [1m[36mComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/comments_controller.rb:18
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:18
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands/1
+Completed 302 Found in 45ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:21:33 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 491ms (Views: 477.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/brands/1/comments" for 122.211.70.242 at 2021-11-19 14:21:41 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMALMOFcUpaphmCZQ7+vd761W/ABPeDPqEHB+tHt1TBSnW8SCs923SsUMUnKzizFKAGnSUJqvIxfHzWbdrRKlQ==", "comment"=>{"comment"=>"コメントします"}, "commit"=>"送信する", "brand_id"=>"1"}
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "brand_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["brand_id", 1], ["comment", "コメントします"], ["created_at", "2021-11-19 14:21:41.247784"], ["updated_at", "2021-11-19 14:21:41.247784"]]
+  ↳ app/controllers/comments_controller.rb:10
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:10
+Redirected to https://45b8f2dd0e6744249e0b2f43bbb98b09.vfs.cloud9.ap-northeast-1.amazonaws.com/brands/1
+Completed 302 Found in 26ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/brands/1" for 122.211.70.242 at 2021-11-19 14:21:41 +0000
+Cannot render console from 122.211.70.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/brands_controller.rb:25
+  Rendering brands/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:29
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:42
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."brand_id" = ?[0m  [["brand_id", 1]]
+  ↳ app/views/brands/show.html.erb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/brands/show.html.erb:45
+  Rendered brands/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 92ms (Views: 86.9ms | ActiveRecord: 0.6ms)
+
+

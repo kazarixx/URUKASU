@@ -4,7 +4,6 @@
         <div class="col-8">
             <%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: "no_image.jpeg" %>
         </div>
-
         <div class="col-4">
         <table class="new-form-table">
           <tbody>
@@ -38,6 +37,27 @@
           </tbody>
         </table>
         </div>
-
+        <!--コメント欄-->
+        <div class="row">
+          <p>コメント件数：<%= @brand.comments.count %></p>
+          <% @brand.comments.each do |comment| %>
+            <div class="row">
+              <p>コメントした人：<%= comment.user.name %></p>
+              <p>投稿日：<%= comment.created_at.strftime('%Y/%m/%d') %></p>
+              <p><%= comment.comment %></p>
+                <% if comment.user == current_user %>
+                  <p>
+                    <%= link_to "削除", brand_comment_path(comment.brand, comment), method: :delete %>
+                  </p>
+                <% end %>
+            </div>
+          <% end %>
+        </div>
+        <div class="row">
+          <%= form_with model:[@brand, @comment], local: true do |f| %>
+            <%= f.text_area :comment, rows:'5', placeholder: "コメントしてね" %>
+            <%= f.submit "送信する" %>
+          <% end %>
+        </div>
     </div>
 </div>

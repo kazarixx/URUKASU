@@ -8,14 +8,15 @@
            <p><%= link_to "退会", users_confirm_path %></p>
           <% end %>
     </div>
-    
+
     <div class="col-8">
       <div class="row">
         <h3>いいね一覧</h3>
       </div>
-      
+
       <div class="row">
         <h3>コメント済み一覧</h3>
+        <% @brand.comments.each do |comment| %>
       </div>
     </div>
   </div>
