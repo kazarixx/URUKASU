@@ -23,6 +23,7 @@ class BrandsController < ApplicationController
 
   def show
     @brand = Brand.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit
