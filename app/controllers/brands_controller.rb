@@ -24,6 +24,12 @@ class BrandsController < ApplicationController
   def show
     @brand = Brand.find(params[:id])
     @comment = Comment.new
+    @comments = Comment.where(params[:id])
+    if @brand.comments.blank?
+      @average_rate = 0
+    else
+      @average_rate = @brand.comments.average(:rate)
+    end
   end
 
   def edit

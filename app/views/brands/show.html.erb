@@ -26,6 +26,23 @@
               <th>銘柄説明</th>
               <td><%= @brand.body %></td>
             </tr>
+
+            <tr>
+              <th></th>
+              <td class="average-review-rating" data-score=<%= @average_rate %>></div>
+                <script>
+                  $('.average-review-rating').raty({
+                    readOnly: true,
+                    starOn: "<%= asset_path('star-on.png') %>",
+                    starOff: "<%= asset_path('star-off.png') %>",
+                    starHalf: "<%= asset_path('star-half.png') %>",
+                    score: function() {
+                      return $(this).attr('data-score')
+                    }
+                  });
+                </script>
+              </td>
+            </tr>
             <% if @brand.user_id == current_user.id %>
             <tr>
                 <td><%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success" %></td>
@@ -39,29 +56,41 @@
         </div>
         <!--いいね-->
         <div id="brand_<%= @brand.id %>">
-          <p class="favorite-btn"><%= render "favorites/favorite-btn", brand: @brand %></td>
-        </div>
+          <p class= "favorite-btn"><%= render "favorites/favorite-btn", brand: @brand %></p>
         <!--コメント欄-->
-        <div class="row">
-          <p>コメント件数：<%= @brand.comments.count %></p>
-          <% @brand.comments.each do |comment| %>
-            <div class="row">
-              <p>コメントした人：<%= comment.user.name %></p>
-              <p>投稿日：<%= comment.created_at.strftime('%Y/%m/%d') %></p>
-              <p><%= comment.comment %></p>
-                <% if comment.user == current_user %>
-                  <p>
-                    <%= link_to "削除", brand_comment_path(comment.brand, comment), method: :delete %>
-                  </p>
-                <% end %>
-            </div>
-          <% end %>
+          <p class= "comments-count">コメント数：<%= @brand.comments.count %></p>
+        </div>
+        <div class="comments">
+            <%= render 'comments/index', brand: @brand %>
         </div>
         <div class="row">
-          <%= form_with model:[@brand, @comment], local: true do |f| %>
+          <%= form_with model:[@brand, @comment], remote: true do |f| %>
             <%= f.text_area :comment, rows:'5', placeholder: "コメントしてね" %>
+             <div id="rating-form">
+            <%= f.label :rate%>
+            <%# scoreNameの値をhidden_fieldでカラムに送っている %>
+            <%= f.hidden_field :rate, :value => 'score' %>
+            </div>
             <%= f.submit "送信する" %>
           <% end %>
+        </div>
+        <!--raty-->
+        <script>
+          $('#rating-form').raty({
+              starOn: "<%= asset_path('star-on.png') %>",
+              starOff: "<%= asset_path('star-off.png') %>",
+              scoreName: 'comment[rate]'
+          });
+        </script>
+        <script>
+          $('.review-rating').raty({
+          readOnly: true,
+          score: function() {
+            return $(this).attr('data-score');
+          },
+          path: '/assets/'
+          });
+        </script>
         </div>
     </div>
 </div>
