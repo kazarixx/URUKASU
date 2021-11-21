@@ -17,10 +17,10 @@ class UsersController < ApplicationController
   def confirm
     @user = current_user
   end
-  
+
   private
   def user_params
     params.require(:user).permit(:name, :profile_image)
   end
-
+  
 end

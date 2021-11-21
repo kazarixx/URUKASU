@@ -10,13 +10,45 @@
     </div>
 
     <div class="col-8">
+      <!--いいね一覧-->
       <div class="row">
         <h3>いいね一覧</h3>
+        <table class = "table table-striped">
+            <thead>
+              <th>画像</th>
+              <th>銘柄名</th>
+            </thead>
+          <% @user.favorites.each do |f| %>
+            <tbody>
+              <tr>
+                  <td><%= attachment_image_tag f.brand, :brand_image, size: '100x100',fallback: "no_image.jpeg"  %></td>
+                  <td><%= link_to brand_path(f.brand_id) do %>
+                  <%= f.brand.prefecture.name %><%= f.brand.brand_name %><% end %></td>
+              </tr>
+            </tbody>
+          <% end %>
+        </table>
       </div>
-
+      <!--コメント済み一覧-->
       <div class="row">
         <h3>コメント済み一覧</h3>
-        <% @brand.comments.each do |comment| %>
+        <table class = "table table-striped">
+            <thead>
+              <th>画像</th>
+              <th>銘柄名</th>
+              <th>コメント</th>
+            </thead>
+        <% @user.comments.each do |c| %>
+            <tbody>
+              <tr>
+                  <td><%= attachment_image_tag c.brand, :brand_image, size: '100x100',fallback: "no_image.jpeg"  %></td>
+                  <td><%= link_to brand_path(c.brand_id) do %>
+                  <%= c.brand.prefecture.name %><%= c.brand.brand_name %><% end %></td>
+                  <td><%= c.comment %></td>
+              </tr>
+            </tbody>
+        <% end %>
+        </table>
       </div>
     </div>
   </div>
