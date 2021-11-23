@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <h3>銘柄一覧</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>銘柄画像</th>
+                    <th>産地名</th>
+                    <th>銘柄名</th>
+                    <th>JAN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @brands.each do |brand| %>
+                <tr>
+                    <td><%= attachment_image_tag brand, :brand_image, size: '150x150', fallback: "no_image.jpeg" %></td>
+                    <td><%= Prefecture.find_by(id: brand.prefecture_id).name %></td>
+                    <td><%= link_to brand.brand_name , brand_path(brand) %></td>
+                    <td><%= brand.jan %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+        <%= link_to "新規作成" , new_brand_path , class: "btn btn-primary" %></br>
+        <%= paginate @brands %>
+        </div>
+    </div>
+</div>
