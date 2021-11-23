@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-4">
       <h3><%= @user.name %></h3>
-        <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: asset_path("no_image.jpeg"), size: '100x100' %>
+        <%= attachment_image_tag @user, :profile_image, size: '100x100' %>
           <% if @user.id == current_user.id %>
            <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
            <p><%= link_to "退会", users_confirm_path %></p>
@@ -21,7 +21,7 @@
           <% @user.favorites.each do |f| %>
             <tbody>
               <tr>
-                  <td><%= attachment_image_tag f.brand, :brand_image, size: '100x100',fallback: asset_path("no_image.jpeg")  %></td>
+                  <td><%= attachment_image_tag f.brand, :brand_image, size: '100x100'%></td>
                   <td><%= link_to brand_path(f.brand_id) do %>
                   <%= f.brand.prefecture.name %><%= f.brand.brand_name %><% end %></td>
               </tr>
