@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>銘柄詳細</h2>
+    <h3>銘柄詳細</h3>
     <div class="row">
         <div class="col-8">
             <%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: "no_image.jpeg" %>
@@ -73,6 +73,9 @@
             <%= f.submit "送信する" %>
           <% end %>
         </div>
+        
+        
+        
         <!--raty-->
         <script>
           $('#rating-form').raty({
