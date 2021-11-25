@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>銘柄詳細</h3>
+    <h2>銘柄詳細</h2>
     <div class="row">
         <div class="col-8">
             <%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: "no_image.jpeg" %>
@@ -66,22 +66,29 @@
         <div class="row">
           <%= form_with model:[@brand, @comment], remote: true do |f| %>
             <%= f.text_area :comment, rows:'5', placeholder: "コメントしてね" %>
-            <div id="rating-form">
+             <div id="rating-form">
             <%= f.label :rate%>
+            <%# scoreNameの値をhidden_fieldでカラムに送っている %>
             <%= f.hidden_field :rate, :value => 'score' %>
             </div>
             <%= f.submit "送信する" %>
           <% end %>
         </div>
-
-
-
         <!--raty-->
         <script>
           $('#rating-form').raty({
               starOn: "<%= asset_path('star-on.png') %>",
               starOff: "<%= asset_path('star-off.png') %>",
               scoreName: 'comment[rate]'
+          });
+        </script>
+        <script>
+          $('.review-rating').raty({
+          readOnly: true,
+          score: function() {
+            return $(this).attr('data-score');
+          },
+          path: '/assets/'
           });
         </script>
         </div>
