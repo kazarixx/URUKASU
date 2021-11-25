@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
     <title>URUKASU</title>
     <script src="https://kit.fontawesome.com/cdf8be78e7.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
@@ -8,43 +9,59 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.scss">
   </head>
 
   <body>
-    <header>
-      <% if user_signed_in? %>
-        <li>
-          <%= link_to "TOP", root_path %>
-        </li>
-        <li>
-          <%= link_to "銘柄一覧", brands_path %>
-        </li>
-        <li>
-          <%= link_to "マイページ", user_path(current_user.id) %>
-        </li>
-        <li>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </li>
-      <% else %>
-        <li>
-          <%= link_to "TOP", root_path %>
-        </li>
-        <li>
-          <%= link_to "新規登録", new_user_registration_path %>
-        </li>
-        <li>
-          <%= link_to "ログイン", new_user_session_path %>
-        </li>
-        <li>
-          <%= link_to "銘柄一覧", brands_path %>
-        </li>
-      <% end %>
+    <header class="shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class ="container">
+            <%= link_to image_tag("URUKASU.png") , root_path , class:"navbar-brand" %>
+          <div>
+          <ul class ="navbar-nav ml-auto">
+          <% if user_signed_in? %>
+            <li class = "nav-item">
+              <%= link_to "TOP", root_path, class:'nav-link' %>
+            </li>
+            <li class = "nav-item">
+              <%= link_to "銘柄一覧", brands_path, class:"nav-link" %>
+            </li>
+            <li class = "nav-item">
+              <%= link_to "マイページ", user_path(current_user.id),class:'nav-link' %>
+            </li>
+            <li class = "nav-item">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:'nav-link' %>
+            </li>
+          <% else %>
+            <li class = "nav-item">
+              <%= link_to "TOP", root_path, class:'nav-link' %>
+            </li>
+            <li class = "nav-item">
+              <%= link_to "新規登録", new_user_registration_path,class:'nav-link' %>
+            </li>
+            <li class = "nav-item">
+              <%= link_to "ログイン", new_user_session_path,class:'nav-link' %>
+            </li>
+            <li class = "nav-item">
+              <%= link_to "銘柄一覧", brands_path,class:"nav-link" %>
+            </li>
+          <% end %>
+          </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-
+    <div class="container">
+    <%= render 'layouts/search'%>
+    </div>
     <%= yield %>
-
-    <footer>
-
+    <footer class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="m-4"><p class="text-center">URUKASU</p></div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
