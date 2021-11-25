@@ -34,6 +34,15 @@
   border-radius: 100%;
  }
 }
+
+.search-form{
+   display: flex; /* 子要素をflexboxで揃える */
+   flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+   justify-content: end; /* 子要素をflexboxにより中央に配置する */
+   align-items: end;  /* 子要素をflexboxにより中央に配置する */
+   padding-top: 20px;
+}
+
  // リンク
 .nav-item{
  padding: 10px;
