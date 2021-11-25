@@ -48,14 +48,22 @@ footer{
  height: 100px ;
 }
 
-h3 {
+h3{
   padding: 20px;
   background-color: #f6f6f6;
   border-left: 6px solid #ffc0cb;
 }
 
-
 // テーブル
 table{
    margin: 15px 0px 0px 0px;
+ }
+
+ @media (max-width:1200px) {
+   .container{
+   display: flex; /* 子要素をflexboxで揃える */
+   flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+   justify-content: center; /* 子要素をflexboxにより中央に配置する */
+   align-items: center;  /* 子要素をflexboxにより中央に配置する */
+  }
  }
