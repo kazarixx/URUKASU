@@ -1,20 +1,25 @@
-<table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>銘柄画像</th>
-                    <th>産地名</th>
-                    <th>銘柄名</th>
-                    <th>JAN</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% brands.each do |brand| %>
-                <tr>
-                    <td><%= attachment_image_tag brand, :brand_image, size: '150x150', fallback: "no_image.jpeg" %></td>
-                    <td><%= Prefecture.find_by(id: brand.prefecture_id).name %></td>
-                    <td><%= link_to brand.brand_name , brand_path(brand) %></td>
-                    <td><%= brand.jan %></td>
-                </tr>
-                <% end %>
-            </tbody>
-  </table>
+
+<div class="row">
+    <div class="flex">
+    <% brands.each do |brand| %>
+        <div class="item">
+          <div class="card">
+              <div class="card-img-top-ground">
+              <div class="card-img-top"><%= link_to brand_path(brand) do %><%= attachment_image_tag brand, :brand_image, size: '100%', fallback: "no_image.jpeg",class:"card-img-top" %><% end %></div>
+              </div>
+                <div class="card-body">
+                      <h5 class="card-title">
+                        <%= link_to brand.brand_name , brand_path(brand) , class:"text-dark"  %></br>
+                          <i class="far fa-flag"></i><span> <%= Prefecture.find_by(id: brand.prefecture_id).name %></span>
+                      </h5>
+                      <p class="card-text">JAN：<%= brand.jan %></p>
+                      <p class="card-text"><i class="fas fa-comment"></i> コメント <%= brand.comments.count %>件</p>
+                      <p class="card-text"><i class="fas fa-heart"></i> いいね　<%= brand.comments.count %></p>
+              </div>
+          </div>
+        </div>
+    <% end %>
+    </div>
+</div>
+<%= paginate @brands %>
+
