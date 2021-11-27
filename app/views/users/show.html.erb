@@ -8,7 +8,7 @@
             <% if @user.id == current_user.id %>
              <p><%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success" %></p>
              <p><%= link_to "退会", users_confirm_path, class: "btn btn-danger" %></p>
-             <p><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-primary" %></p>
+             <p><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></p>
             <% end %>
         </div>
       </div>
