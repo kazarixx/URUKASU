@@ -1,6 +1,6 @@
 class Brand < ApplicationRecord
   has_many :comments,dependent: :destroy
-  has_many :favorites
+  has_many :favorites,dependent: :destroy
   belongs_to :user
 
   extend ActiveHash::Associations::ActiveRecordExtensions
