@@ -42,7 +42,8 @@
 
 ## 設計書
 
-- 作成中です
+- <https://app.diagrams.net/#G1J3Ska4180dnKB7ZLL0CzqenalKlFefJZ>
+- <https://docs.google.com/spreadsheets/d/1g23DJr0z1Hwj71HNT4KS9VIjV0DV6quN-eIRQaELYFg/edit#gid=1581419327>
 
 ## チャレンジ要素一覧
 
