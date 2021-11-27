@@ -1,61 +1,58 @@
 <div class="container">
-    <h3><%= Prefecture.find_by(id: @brand.prefecture_id).name %>産<%= @brand.brand_name %></h3>
+    <h3>銘柄詳細</h3>
     <div class="row">
-        <div class="col-4">
-            <%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: asset_path("no_image.jpeg") %>
-        </div>
         <div class="col-8">
-          <table>
-            <tbody>
-              <tr>
-                <th>産地名</th>
-                <td><%= Prefecture.find_by(id: @brand.prefecture_id).name %></td>
-              </tr>
+            <%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: "no_image.jpeg" %>
+        </div>
+        <div class="col-4">
+        <table class="new-form-table">
+          <tbody>
+            <tr>
+              <th>産地名</th>
+              <td><%= Prefecture.find_by(id: @brand.prefecture_id).name %></td>
+            </tr>
 
-              <tr>
-                <th>銘柄名</th>
-                <td><%= @brand.brand_name %></td>
-              </tr>
+            <tr>
+              <th>銘柄名</th>
+              <td><%= @brand.brand_name %></td>
+            </tr>
 
-              <tr>
-                <th>JANコード</th>
-                <td><%= @brand.jan %></td>
-              </tr>
+            <tr>
+              <th>JANコード</th>
+              <td><%= @brand.jan %></td>
+            </tr>
 
-              <tr>
-                <th>銘柄説明</th>
-                <td><%= @brand.body %></td>
-              </tr>
+            <tr>
+              <th>銘柄説明</th>
+              <td><%= @brand.body %></td>
+            </tr>
 
-              <tr>
-                <th>評価</th>
-                <td class="average-review-rating" data-score=<%= @average_rate %>></div>
-                  <script>
-                    $('.average-review-rating').raty({
-                      readOnly: true,
-                      starOn: "<%= asset_path('star-on.png') %>",
-                      starOff: "<%= asset_path('star-off.png') %>",
-                      starHalf: "<%= asset_path('star-half.png') %>",
-                      score: function() {
-                        return $(this).attr('data-score')
-                      }
-                    });
-                  </script>
-                </td>
-              </tr>
-              <% if @brand.user_id == current_user.id %>
-              <div class="container">
-              <tr>
-                  <td><%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success" %></td>
-                  <td><%= link_to "削除" , brand_path(@brand.id) ,method: :delete, class: "btn btn-danger" %></td>
-              </tr>
-              <% else %>
-              <tr>
-                  投稿してみませんか？<td><%= link_to "新規作成" , new_brand_path , class: "btn btn-primary" %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
+            <tr>
+              <th></th>
+              <td class="average-review-rating" data-score=<%= @average_rate %>></div>
+                <script>
+                  $('.average-review-rating').raty({
+                    readOnly: true,
+                    starOn: "<%= asset_path('star-on.png') %>",
+                    starOff: "<%= asset_path('star-off.png') %>",
+                    starHalf: "<%= asset_path('star-half.png') %>",
+                    score: function() {
+                      return $(this).attr('data-score')
+                    }
+                  });
+                </script>
+              </td>
+            </tr>
+            <% if @brand.user_id == current_user.id %>
+            <tr>
+                <td><%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success" %></td>
+            </tr>
+            <% end %>
+            <tr>
+                <td><%= link_to "新規作成" , new_brand_path , class: "btn btn-primary" %></td>
+            </tr>
+          </tbody>
+        </table>
         </div>
         <!--いいね-->
         <div id="brand_<%= @brand.id %>">
@@ -76,9 +73,9 @@
             <%= f.submit "送信する" %>
           <% end %>
         </div>
-
-
-
+        
+        
+        
         <!--raty-->
         <script>
           $('#rating-form').raty({
