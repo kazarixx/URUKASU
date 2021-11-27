@@ -1,4 +1,5 @@
 class BrandsController < ApplicationController
+   before_action :authenticate_user!,except: [:index]
   def new
     @brand = Brand.new
   end
@@ -14,7 +15,10 @@ class BrandsController < ApplicationController
   end
 
 
-  def destroy
+   def destroy
+    @brand = Brand.find(params[:id])
+    @brand.destroy
+    redirect_to brands_path
   end
 
   def index
