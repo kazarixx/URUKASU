@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>銘柄詳細</h3>
+    <h3><%= Prefecture.find_by(id: @brand.prefecture_id).name %>産<%= @brand.brand_name %></h3>
     <div class="row">
         <div class="col-4">
             <%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: asset_path("no_image.jpeg") %>
