@@ -16,10 +16,13 @@ class BrandsController < ApplicationController
 
 
   def destroy
+    @brand = Brand.find(params[:id])
+    @brand.destroy
+    redirect_to brands_path
   end
 
   def index
-    @brands = Brand.all.page(params[:page]).per(10)
+    @brands = Brand.all.page(params[:page]).per(9)
   end
 
   def show

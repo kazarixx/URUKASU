@@ -37,9 +37,9 @@
 
 .search-form{
    display: flex; /* 子要素をflexboxで揃える */
-   flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
-   justify-content: end; /* 子要素をflexboxにより中央に配置する */
-   align-items: end;  /* 子要素をflexboxにより中央に配置する */
+   flex-direction: column;
+   justify-content: end;
+   align-items: end;
    padding-top: 20px;
 }
 
@@ -51,6 +51,7 @@
  }
 }
 
+
 // フッター
 footer{
  width: 100% ;
@@ -59,14 +60,9 @@ footer{
 
 h3{
   padding: 20px;
-  background-color: #f6f6f6;
-  border-left: 6px solid #ffc0cb;
+  background-color: #FCF8E8;
+  border-left: 6px solid #DF7861;
 }
-
-// テーブル
-table{
-   margin: 15px 0px 0px 0px;
- }
 
  @media (max-width:1200px) {
    .container{

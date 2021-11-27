@@ -3,8 +3,7 @@
         <div class="col">
         <h3>銘柄一覧</h3>
         <%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-primary" %></br>
-        <%= render 'brands/index',brands: @brands%>
-        <%= paginate @brands %>
         </div>
     </div>
+    <%= render 'brands/index',brands: @brands%>
 </div>
