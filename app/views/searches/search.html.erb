@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+          <% if @model == 'brand' %>
+          	<h3>銘柄検索 "<%= @content %>"</h3>
+            <%= render 'brands/index', brands: @records %>
+            <% else %>
+            <h3>産地検索 "<%= @content %>"</h3>
+            <%= render 'brands/index', brands: @records %>
+          <% end %>
+        </div>
+    </div>
+</div>

@@ -57,7 +57,7 @@
         <div id="brand_<%= @brand.id %>">
           <p class= "favorite-btn"><%= render "favorites/favorite-btn", brand: @brand %></p>
         <!--コメント欄-->
-          <p class= "comments-count">コメント数：<%= @brand.comments.count %></p>
+          <p class= "comments-count"><i class="fas fa-comments"></i>コメント数：<%= @brand.comments.count %></p>
         </div>
         <div class="comments">
             <%= render 'comments/index', brand: @brand %>

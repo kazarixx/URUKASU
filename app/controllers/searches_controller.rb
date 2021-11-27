@@ -6,5 +6,6 @@ class SearchesController < ApplicationController
 			if @model == 'brand'
 				@records = Brand.search_for(@content, @method)
 			end
+			@brands = Brand.all.page(params[:page]).per(9)
 	end
 end

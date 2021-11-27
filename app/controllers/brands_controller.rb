@@ -22,7 +22,7 @@ class BrandsController < ApplicationController
   end
 
   def index
-    @brands = Brand.all.page(params[:page]).per(10)
+    @brands = Brand.all.page(params[:page]).per(9)
   end
 
   def show

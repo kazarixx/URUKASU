@@ -205,6 +205,7 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
 
+# paginate
   views:
       pagination:
         first: '<i class="fas fa-angle-double-left"></i>'
@@ -213,9 +214,7 @@ ja:
         next: '<i class="fas fa-angle-right"></i>'
         truncate: '...'
 
-
 # devise
-ja:
   activerecord:
     attributes:
       user:
