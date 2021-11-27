@@ -26,7 +26,31 @@
               <th>銘柄説明</th>
               <td><%= @brand.body %></td>
             </tr>
-
+              <tr>
+                <th>評価</th>
+                <td class="average-review-rating" data-score=<%= @average_rate %>></div>
+                  <script>
+                    $('.average-review-rating').raty({
+                      readOnly: true,
+                      starOn: "<%= asset_path('star-on.png') %>",
+                      starOff: "<%= asset_path('star-off.png') %>",
+                      starHalf: "<%= asset_path('star-half.png') %>",
+                      score: function() {
+                        return $(this).attr('data-score')
+                      }
+                    });
+                  </script>
+                </td>
+              </tr>
+              <% if @brand.user_id == current_user.id %>
+              <div class="container">
+              <tr>
+                  <td><%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success" %></td>
+                  <td><%= link_to "削除" , brand_path(@brand.id) ,method: :delete, class: "btn btn-danger" %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
             <tr>
               <th></th>
               <td class="average-review-rating" data-score=<%= @average_rate %>></div>
@@ -70,7 +94,7 @@
             <%= f.label :rate%>
             <%= f.hidden_field :rate, :value => 'score' %>
             </div>
-            <%= f.submit "送信する" %>
+            <%= f.submit "送信する",class:"btn btn-danger" %>
           <% end %>
         </div>
         

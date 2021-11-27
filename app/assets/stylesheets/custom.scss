@@ -1,4 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
-.body{
+  .body{
  	 font-family: 'Zen Maru Gothic', sans-serif;
-}
+  }
+// brand/index カード
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1200px;
+      height: 100%;
+      .item{
+        width: 350px;
+        padding: 15px;
+        margin: 0px 0px 10px 16px;
+        border-radius: 0px;
+        background-color: #ECDFC8 ;
+        .card{
+          background-color: #FCF8E8 ;
+          .card-img-top-ground{
+             width: 250px ;
+             height: 200px;
+             margin: 10px auto;
+            }
+            .card-img-top{
+            width: 100% ;
+            height: 100%;
+            border-radius: 20px;
+            }
+          .card-body{
+           	background-color: white;
+            .card-title{
+             padding: 5px;
+              a:hover {
+             	background-color: #DF7861;
+              }
+            }
+          }
+        }
+      }
+    }
+
+// ボタン
+    .btn.btn-danger{
+      background-color: #EA907A;
+      color: #5C3D2E;
+    }
+    .btn.btn-success{
+      background-color: #AACDBE;
+      color: #5C3D2E;
+    }
+    .btn.btn-warning{
+      background-color: #FBC687;
+      color: #5C3D2E;
+    }
+
+// ページネーション
+  .pagination{
+      justify-content: center;
+  }
+      ul.pagination li .page-link {
+        border-radius: 50%;
+        border: none;
+        background-color: #FCF8E8;
+        color: #DF7861;
+        margin: 5px;
+      }
+
+      ul.pagination li.active .page-link {
+        border-radius: 50%;
+        background-color: #DF7861;
+        color: white;
+        border: none;
+      }
+
+// いいねボタン
+  .like-btn{
+    color: #808080;
+    animation: heartAnimation .2s;
+  }
+
+  .unlike-btn{
+    color: #e54747;
+    animation: heartAnimation .2s;
+  }
+
+@keyframes heartAnimation {
+  0% {
+    transform: scale(0.5);
+  }
+  10% {
+    transform: scale(0.7);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }

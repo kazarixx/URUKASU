@@ -7,7 +7,7 @@
     <p><%= comment.comment %></p>
         <% if comment.user == current_user %>
            <p class="comments">
-              <%= link_to "削除", brand_comment_path(comment.brand, comment), method: :delete, remote: true %>
+              <%= link_to "削除", brand_comment_path(comment.brand, comment), method: :delete, remote: true,class: "btn btn-danger" %>
             </p>
         <% end %>
     </div>

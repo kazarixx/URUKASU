@@ -5,9 +5,9 @@
         <h3><%= @user.name %>さんのマイページ</h3>
         <div class="user">
           <p><%= attachment_image_tag @user, :profile_image, size: '200x200' %></p>
-            <% if @user.id == current_user.id %>
-             <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
-             <p><%= link_to "退会", users_confirm_path %></p>
+             <p><%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success" %></p>
+             <p><%= link_to "退会", users_confirm_path, class: "btn btn-danger" %></p>
+             <p><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></p>
             <% end %>
         </div>
       </div>
