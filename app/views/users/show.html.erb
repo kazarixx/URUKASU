@@ -4,7 +4,8 @@
       <div class="row">
         <h3><%= @user.name %>さんのマイページ</h3>
         <div class="user">
-          <p><%= attachment_image_tag @user, :profile_image, size: '200x200' %></p>
+          <p><%= attachment_image_tag @user, :profile_image, size: '200x200',fallback: asset_path("no_image.jpeg"), size: '100x100' %></p>
+            <% if @user.id == current_user.id %>
              <p><%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success" %></p>
              <p><%= link_to "退会", users_confirm_path, class: "btn btn-danger" %></p>
              <p><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></p>
@@ -27,7 +28,7 @@
             <tbody>
               <% @user.favorites.each do |f| %>
               <tr>
-                  <td><%= attachment_image_tag f.brand, :brand_image, size: '100x100'%></td>
+                  <td><%= attachment_image_tag f.brand, :brand_image, size: '100x100',fallback: asset_path("no_image.jpeg"), size: '100x100'%></td>
                   <td><%= link_to brand_path(f.brand_id) do %>
                   <%= f.brand.prefecture.name %><%= f.brand.brand_name %><% end %></td>
               </tr>
@@ -50,7 +51,7 @@
             <tbody>
               <% @user.comments.each do |c| %>
               <tr>
-                  <td><%= attachment_image_tag c.brand, :brand_image, size: '100x100' %></td>
+                  <td><%= attachment_image_tag c.brand, :brand_image, size: '100x100',fallback: asset_path("no_image.jpeg"), size: '100x100' %></td>
                   <td><%= link_to brand_path(c.brand_id) do %>
                   <%= c.brand.prefecture.name %><%= c.brand.brand_name %><% end %></td>
                   <td><%= c.comment %></td>
