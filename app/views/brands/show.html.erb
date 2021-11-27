@@ -49,10 +49,6 @@
                   <td><%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success" %></td>
                   <td><%= link_to "削除" , brand_path(@brand.id) ,method: :delete, class: "btn btn-danger" %></td>
               </tr>
-              <% else %>
-              <tr>
-                  投稿してみませんか？<td><%= link_to "新規作成" , new_brand_path , class: "btn btn-primary" %></td>
-              </tr>
               <% end %>
             </tbody>
           </table>
@@ -73,7 +69,7 @@
             <%= f.label :rate%>
             <%= f.hidden_field :rate, :value => 'score' %>
             </div>
-            <%= f.submit "送信する" %>
+            <%= f.submit "送信する",class:"btn btn-danger" %>
           <% end %>
         </div>
 
