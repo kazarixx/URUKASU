@@ -6,9 +6,9 @@
         <div class="user">
           <p><%= attachment_image_tag @user, :profile_image, size: '200x200',fallback: asset_path("no_image.jpeg"), size: '100x100' %></p>
             <% if @user.id == current_user.id %>
-             <p><%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success" %></p>
-             <p><%= link_to "退会", users_confirm_path, class: "btn btn-danger" %></p>
-             <p><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></p>
+             <p><i class="fas fa-user-edit"></i><%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success " %></p>
+             <p><i class="fas fa-sign-out-alt"></i><%= link_to "退会", users_confirm_path, class: "btn btn-danger" %></p>
+             <p><i class="fas fa-comment-dots"></i><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></p>
             <% end %>
         </div>
       </div>
