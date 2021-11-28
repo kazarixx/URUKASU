@@ -1,4 +1,15 @@
 $("#brand_<%= @brand.id %> .comments-count").html("コメント数: <%= @brand.comments.count %>");
 $(".comments").html("<%= j(render 'comments/index', brand: @brand) %>");
-<!--空に-->
+<!--空に書き換え-->
 $("#comment_comment").val("");
+
+
+ $('.review-rating').raty({
+     readOnly: true,
+     starOn: "<%= asset_path('star-on.png') %>",
+     starOff: "<%= asset_path('star-off.png') %>",
+     starHalf: "<%= asset_path('star-half.png') %>",
+     score: function() {
+     return $(this).attr('data-score');
+     }
+    });
