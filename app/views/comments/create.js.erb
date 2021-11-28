@@ -1,10 +1,4 @@
 $("#brand_<%= @brand.id %> .comments-count").html("コメント数: <%= @brand.comments.count %>");
 $(".comments").html("<%= j(render 'comments/index', brand: @brand) %>");
+<!--空に-->
 $("#comment_comment").val("");
-
-$('.review-rating').raty({
-    readOnly: true,score: function() {
-    return $(this).attr('data-score');
-    },
-    path: '/assets/'
-    });
