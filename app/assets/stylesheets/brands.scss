@@ -1,3 +1,32 @@
 // Place all the styles related to the brands controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.baloon-top{
+  position: relative;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+  border-radius: 10px;
+}
+
+.baloon-top:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 10%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #e0edff;
+}
+
+.baloon-top p {
+  margin: 0;
+  padding: 0;
+}
+
+.baloon-top i{
+  color: #FEA82F;
+}

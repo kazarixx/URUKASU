@@ -15,7 +15,7 @@ class BrandsController < ApplicationController
   end
 
 
-   def destroy
+  def destroy
     @brand = Brand.find(params[:id])
     @brand.destroy
     redirect_to brands_path

@@ -1,3 +1,4 @@
+<!--銘柄一覧のページ・カード表示-->
 <div class="row">
   <div class="flex">
     <% brands.each do |brand| %>
@@ -13,6 +14,13 @@
                       </h5>
                       <p class="card-text">JAN：<%= brand.jan %></p>
                       <p class="card-text"><i class="fas fa-comment"></i> コメント <%= brand.comments.count %>件</p>
+                      <p class="card-text baloon-top"><i class="fas fa-lightbulb"></i> picked up comment! </br>
+                        <% if brand.comments.blank? %>
+                          まだコメントがありません
+                        <% else %>
+                          <!--18文字以上は省略-->
+                          <%= brand.comments.maximum(:comment).truncate(18) %>
+                        <% end %></p>
                       <p class="card-text"><i class="fas fa-heart"></i> いいね　<%= brand.favorites.count %></p>
                 </div>
           </div>

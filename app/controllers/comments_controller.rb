@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
     @comment.brand_id = @brand.id
+    @comment.score = Language.get_data(comment_params[:comment])
     @comment.save
   end
 
