@@ -15,22 +15,22 @@
           <tbody>
             <tr>
               <th>銘柄画像</th>
-              <td><%= f.attachment_field :brand_image %></td>
+              <td><%= f.attachment_field :brand_image, class: "form-control" %></td>
             </tr>
 
             <tr>
               <th>産地名</th>
-              <td><%= f.collection_select :prefecture_id, Prefecture.all , :id, :name , include_blank: "--選択してください--",class: "form-control" %></td>
+              <td><%= f.collection_select :prefecture_id, Prefecture.all , :id, :name ,{ include_blank: "--選択してください--",:required => true}, {class: "form-control"} %></td>
             </tr>
 
             <tr>
               <th>銘柄名</th>
-              <td><%= f.text_field :brand_name, class: "form-control" %></td>
+              <td><%= f.text_field :brand_name, class: "form-control",:required => true %></td>
             </tr>
 
             <tr>
-              <th>JANコード</th>
-              <td><%= f.text_field :jan, class: "form-control" %></td>
+              <th>JANコード（13桁）</th>
+              <td><%= f.text_field :jan, class: "form-control",:required => true %></td>
             </tr>
 
             <tr>
