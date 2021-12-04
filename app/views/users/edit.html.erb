@@ -1,21 +1,29 @@
 <div class="container">
-  <div class="row">
-  <h3>プロフィール編集</h3>
-    <%= form_with model: @user, local:true do |f| %>
-      <div>
-        <%= f.label :profile_image %>
-        <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
-        <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpeg", size: '60x60'%>
-      </div>
-      <div>
-        <%= f.label :name %>
-        <%= f.text_field :name, autofocus: true, placeholder:"名前"%>
-      </div>
-      <div>
-        <%= f.label :email %>
-        <%= f.email_field :email, placeholder:"メールアドレス" %>
-      </div>
-    <%= f.submit "変更を保存" %>
-  <% end %>
-</div>
+    <div class="row">
+        <div class="col">
+          <h3>プロフィール編集</h3>
+            <%= form_with model: @user, local:true do |f| %>
+            <table class="new-form-table">
+              <tbody>
+                <tr>
+                  <th><%= f.label :profile_image %></th>
+                  <td><%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "form-control" %><td>
+                  <td><%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpeg", size: '60x60'%></td>
+                </tr>
+                <tr>
+                  <th><%= f.label :name %></th>
+                  <td><%= f.text_field :name, autofocus: true, placeholder:"名前", class: "form-control"%></td>
+                </tr>
+                <tr>
+                  <th><%= f.label :email %></th>
+                  <td><%= f.email_field :email, placeholder:"メールアドレス", class: "form-control" %></td>
+                </tr>
+              <tbody>
+            </table>
+              <div>
+                <%= f.submit "変更を保存" ,class: "btn btn-success"%>
+              </div>
+          <% end %>
+        </div>
+    </div>
 </div>

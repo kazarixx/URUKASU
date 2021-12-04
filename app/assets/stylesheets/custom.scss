@@ -47,6 +47,11 @@
     margin: 10px;
   }
 }
+// brands/show
+.brand-image{
+  margin: 2rem auto;
+}
+
 // ツールチップ
 .my-tooltip{
   color: skyblue;
@@ -65,6 +70,9 @@
     .btn.btn-warning{
       background-color: #FBC687;
       color: #5C3D2E;
+    }
+    .inline-btn{
+      float: right;
     }
 
 // fontawsome

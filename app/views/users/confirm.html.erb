@@ -1,17 +1,23 @@
-  <div>
-    <h4>本当に退会しますか？</h4>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div>
+        <h3>本当に退会しますか？</h3>
+      </div>
 
-  <div>
-    <p>
-      退会すると、会員登録情報や失われ、<br/>
-      コメント投稿ができなくなります。<br/>
-      退会する場合は、「退会する」をクリックしてください。
-    </p>
-  </div>
+      <div>
+        <p>
+        退会すると、会員登録情報等が失われ、<br/>
+        コメント投稿ができなくなります。<br/>
+        退会する場合は、「退会する」をクリックしてください。
+        </p>
+      </div>
 
-  <div>
-    <p><%= link_to "退会しない", user_path(@user) %></p>
-    <p><%= link_to "退会する",  user_registration_path, method: :delete %></p>
+      <div>
+        <p><%= link_to "退会しない", user_path(@user) %></p>
+        <p><%= link_to "退会する",  user_registration_path, method: :delete %></p>s
+      </div>
+    </div>
   </div>
+</div>
 

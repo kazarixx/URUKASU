@@ -216,6 +216,10 @@ ja:
 
 # devise
   activerecord:
+    models:
+      user: ユーザー
+      brand: 銘柄
+      comment: コメント
     attributes:
       user:
         confirmation_sent_at: パスワード確認送信時刻
@@ -227,6 +231,7 @@ ja:
         current_sign_in_ip: 現在のログインIPアドレス
         email: Eメール
         name: 名前
+        profile_image: プロフィール画像
         encrypted_password: 暗号化パスワード
         failed_attempts: 失敗したログイン試行回数
         last_sign_in_at: 最終ログイン時刻
@@ -242,9 +247,16 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
-
-    models:
-      user: ユーザー
+      # モデル
+      brand:
+        brand_name: "銘柄名"
+        jan: "JANコード"
+        body: "説明文"
+        brand_image: "銘柄画像"
+        prefecture_id: "産地名"
+      comment:
+        comment: "コメント"
+        rate: "評価"
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
