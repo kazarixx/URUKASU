@@ -4,26 +4,30 @@
     <% brands.each do |brand| %>
         <div class="item">
           <div class="card">
+            <!--カード上部-->
               <div class="card-img-top-ground">
-              <div class="card-img-top"><%= link_to brand_path(brand) do %><%= attachment_image_tag brand, :brand_image, size: '100%', fallback:asset_path("no_image.jpg"),class:"card-img-top" %><% end %></div>
-              </div>
-                <div class="card-body">
-                      <h5 class="card-title">
-                        <%= link_to brand.brand_name , brand_path(brand) , class:"text-dark"  %></br>
-                          <i class="fas fa-map-pin"></i> <%= Prefecture.find_by(id: brand.prefecture_id).name %>
-                      </h5>
-                      <p class="card-text">JAN：<%= brand.jan %></p>
-                      <p class="card-text"><i class="fas fa-comment"></i> コメント <%= brand.comments.count %>件</p>
-                      <p class="card-text baloon-top"><i class="fas fa-lightbulb"></i> picked up comment! </br>
-                        <% if brand.comments.blank? %>
-                          まだコメントがありません
-                        <% else %>
-                          <!--18文字以上は省略-->
-                          <% @score = brand.comments.maximum(:score) %>
-                          <%= brand.comments.find_by(score:@score).comment.truncate(18) %>
-                        <% end %></p>
-                      <p class="card-text"><i class="fas fa-heart"></i> いいね　<%= brand.favorites.count %></p>
+                <div class="card-img-top">
+                  <%= link_to brand_path(brand) do %><%= attachment_image_tag brand, :brand_image, size: '100%', fallback:asset_path("no_image.jpg"),class:"card-img-top" %><% end %>
                 </div>
+              </div>
+            <!--カード本文-->
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%= link_to brand.brand_name , brand_path(brand) , class:"text-dark"  %></br>
+                    <i class="fas fa-map-pin"></i> <%= Prefecture.find_by(id: brand.prefecture_id).name %>
+                </h5>
+                <p class="card-text">JAN：<%= brand.jan %></p>
+                <p class="card-text"><i class="fas fa-comment"></i> コメント <%= brand.comments.count %>件</p>
+                <p class="card-text baloon-top"><i class="fas fa-lightbulb"></i> picked up comment! </br>
+                  <% if brand.comments.blank? %>
+                    まだコメントがありません
+                  <% else %>
+                    <!--18文字以上は省略-->
+                    <% @score = brand.comments.maximum(:score) %>
+                    <%= brand.comments.find_by(score:@score).comment.truncate(18) %>
+                  <% end %></p>
+                <p class="card-text"><i class="fas fa-heart"></i> いいね　<%= brand.favorites.count %></p>
+              </div>
           </div>
         </div>
     <% end %>
