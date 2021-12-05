@@ -42,6 +42,7 @@ class BrandsController < ApplicationController
 
   def update
     @brand = Brand.find(params[:id])
+    @brand.user_id = current_user.id
     if @brand.update(brand_params)
       redirect_to brands_path
     else

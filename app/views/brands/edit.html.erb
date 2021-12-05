@@ -3,42 +3,52 @@
     <div class="row">
     <div class="col">
      <h3>銘柄編集</h3>
+     <% if @brand.errors.any? %>
+            <%= @brand.errors.count %>件のエラーが発生しました
+            <% @brand.errors.full_messages.each do |message| %>
+              <%= message %>
+            <% end %>
+          <% end %>
 
       <div class="col">
         <%= form_with model:@brand, url:brand_path, method: :patch, local:true do |f| %>
         <table class="new-form-table">
           <tbody>
             <tr>
-              <th>銘柄画像</th>
-              <td><%= f.attachment_field :brand_image %></td>
-            </tr>
-            
-            <tr>
-              <th>産地名</th>
-              <td><%= f.collection_select :prefecture_id, Prefecture.all , :id, :name , include_blank: "--選択してください--",class: "form-control" %></td>
+              <th><%= f.label :brand_image %></th>
+              <td><%= f.attachment_field :brand_image , class: "form-control"%></td>
             </tr>
 
             <tr>
-              <th>銘柄名</th>
+              <th><%= f.label :prefecture_id %></th>
+              <td><%= f.collection_select :prefecture_id, Prefecture.all , :id, :name , { include_blank: "--選択してください--",:required => true}, {class: "form-control"} %></td>
+            </tr>
+
+            <tr>
+              <th><%= f.label :brand_name %><i class="fas fa-question-circle my-tooltip" title="（例）あきたこまち"></i></th>
               <td><%= f.text_field :brand_name, class: "form-control" %></td>
             </tr>
 
             <tr>
-              <th>JANコード</th>
+              <th><%= f.label :jan %>（13桁）<i class="fas fa-question-circle my-tooltip" title="商品のバーコード下部に記載されている数字です"></i></th>
               <td><%= f.text_field :jan, class: "form-control" %></td>
             </tr>
 
             <tr>
-              <th>銘柄説明</th>
+              <th><%= f.label :body %></th>
               <td><%= f.text_area :body, class: "form-control" %></td>
             </tr>
           </tbody>
         </table>
         <div>
-        <%= f.submit "編集保存" ,class: "btn btn-primary" %>
+        <%= f.submit "編集保存" ,class: "btn btn-success" %>
         </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+<!--ツールチップ-->
+<script>
+  $(".my-tooltip").tooltip();
+</script>

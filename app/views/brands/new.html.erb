@@ -14,27 +14,27 @@
             <table class="new-form-table">
               <tbody>
                 <tr>
-                  <th>銘柄画像</th>
+                  <th><%= f.label :brand_image %></th>
                   <td><%= f.attachment_field :brand_image, class: "form-control" %></td>
                 </tr>
 
                 <tr>
-                  <th>産地名</th>
+                  <th><%= f.label :prefecture_id %></th>
                   <td><%= f.collection_select :prefecture_id, Prefecture.all , :id, :name ,{ include_blank: "--選択してください--",:required => true}, {class: "form-control"} %></td>
                 </tr>
 
                 <tr>
-                  <th>銘柄名<i class="fas fa-question-circle my-tooltip" title="（例）あきたこまち"></i></th>
+                  <th><%= f.label :brand_name %><i class="fas fa-question-circle my-tooltip" title="（例）あきたこまち"></i></th>
                   <td><%= f.text_field :brand_name, class: "form-control",:required => true %></td>
                 </tr>
 
                 <tr>
-                  <th>JANコード（13桁）<i class="fas fa-question-circle my-tooltip" title="商品のバーコード下部に記載されている数字です"></i></th>
+                  <th><%= f.label :jan %>（13桁）<i class="fas fa-question-circle my-tooltip" title="商品のバーコード下部に記載されている数字です"></i></th>
                   <td><%= f.text_field :jan, class: "form-control",:required => true %></td>
                 </tr>
 
                 <tr>
-                  <th>銘柄説明</th>
+                  <th><%= f.label :body %></th>
                   <td><%= f.text_area :body, class: "form-control" %></td>
                 </tr>
               </tbody>
