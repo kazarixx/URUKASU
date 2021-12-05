@@ -1,15 +1,16 @@
 <div class="container">
-  <h3><%= Prefecture.find_by(id: @brand.prefecture_id).name %>産<%= @brand.brand_name %><span class="inline-btn"><%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success" %><%= link_to "削除" , brand_path(@brand.id) ,method: :delete, class: "btn btn-danger" %></span></h3>
+  <h3><span class="span"><%= Prefecture.find_by(id: @brand.prefecture_id).name %>産<%= @brand.brand_name %>
+    <% if @brand.user_id == current_user.id %>
+      <%= link_to "編集" , edit_brand_path(@brand.id) , class: "btn btn-success inline-btn" %>
+      <%= link_to "削除" , brand_path(@brand.id) ,method: :delete, class: "btn btn-danger inline-btn" %></span>
+    <% end %>
+  </h3>
     <!--上部-->
     <div class="row">
-      <div class="col-2 offset-md-1">
-        <div><%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: asset_path("no_image.jpeg"), class:"brand-image" %></div>
-          <% if @brand.user_id == current_user.id %>
-            <p></p>
-            <p></p>
-          <% end %>
+      <div class="col-4 offset-md-1">
+        <div class="img-top-ground"><%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: asset_path("no_image.jpeg"), class:"brand-image" %></div>
       </div>
-      <div class ="col-7 offset-md-2">
+      <div class ="col-7">
         <table class="table">
           <tbody>
             <tr>
@@ -40,7 +41,7 @@
         </table>
         <div id="brand_<%= @brand.id %>">
           <p class= "favorite-btn"><%= render "favorites/favorite-btn", brand: @brand %></p>
-          <i class="fas fa-comments"></i><a class= "comments-count">コメント数：<%= @brand.comments.count %>
+          <i class="fas fa-comments"></i><a class= "comments-count">コメント数：<%= @brand.comments.count %></a>
         </div>
       </div>
     </div>
@@ -60,7 +61,7 @@
       </div>
     </div>
     <!--コメント一覧-->
-    <div class="row comments"><%= render 'comments/index', brand: @brand %></div>
+    <div class="row-11 offset-md-1 comments"><%= render 'comments/index', brand: @brand %></div>
 </div>
 
 <!--評価の平均-->
@@ -83,4 +84,17 @@
     starOff: "<%= asset_path('star-off.png') %>",
     scoreName: 'comment[rate]'
   });
+</script>
+
+<!--comment/_index　評価結果-->
+<script>
+    $('.review-rating').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+        score: function() {
+        return $(this).attr('data-score');
+        }
+    });
 </script>
