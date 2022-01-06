@@ -1,5 +1,8 @@
 class BrandsController < ApplicationController
    before_action :authenticate_user!,except: [:index]
+   before_action :ensure_user, only: [:edit, :update, :destroy]
+
+
   def new
     @brand = Brand.new
   end
@@ -54,5 +57,12 @@ class BrandsController < ApplicationController
   def brand_params
     params.require(:brand).permit(:user_id, :prefecture_id, :brand_name, :jan , :body, :brand_image)
   end
+
+  def ensure_user
+    @brands = current_user.brands
+    @brand = @brands.find_by(id: params[:id])
+    redirect_to new_brand_path unless @brand
+  end
+
 
 end
