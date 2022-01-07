@@ -1,6 +1,7 @@
 class BrandsController < ApplicationController
    before_action :authenticate_user!,except: [:index]
    before_action :ensure_user, only: [:edit, :update, :destroy]
+   before_action :set_q, only: [:index, :search]
 
 
   def new
@@ -53,6 +54,11 @@ class BrandsController < ApplicationController
     end
   end
 
+  def search
+    @results = @q.result
+    @brands = Brand.all.page(params[:page]).per(9)
+  end
+
   private
   def brand_params
     params.require(:brand).permit(:user_id, :prefecture_id, :brand_name, :jan , :body, :brand_image)
@@ -64,5 +70,8 @@ class BrandsController < ApplicationController
     redirect_to new_brand_path unless @brand
   end
 
+  def set_q
+    @q = Brand.ransack(params[:q])
+  end
 
 end

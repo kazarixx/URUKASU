@@ -5,5 +5,12 @@
             <%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></br>
         </div>
     </div>
+    <h1>ブランド名検索</h1>
+      <%= search_form_for @q, url: search_brands_path do |f| %>
+        <%= f.label :brand_name_cont, 'ブランド名' %>
+        <%= f.search_field :brand_name_cont %>
+        <br>
+        <%= f.submit '検索' %>
+      <% end %>
     <%= render 'brands/index',brands: @brands %>
 </div>
