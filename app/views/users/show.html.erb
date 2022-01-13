@@ -1,20 +1,24 @@
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col">
       <div class="row">
         <h3><%= @user.name %>さんのマイページ</h3>
-        <div class="user">
-          <p><%= attachment_image_tag @user, :profile_image, size: '200x200',fallback: asset_path("no_image.jpeg"), size: '100x100' %></p>
-            <% if @user.id == current_user.id %>
-             <p><i class="fas fa-user-edit"></i><%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success " %></p>
-             <p><i class="fas fa-sign-out-alt"></i><%= link_to "退会", users_confirm_path, class: "btn btn-danger" %></p>
-             <p><i class="fas fa-comment-dots"></i><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></p>
-            <% end %>
+        <div class="user row">
+          <div class="col-lg-12 col-sm-7">
+          <p><%= attachment_image_tag @user, :profile_image, size: '200x200',fallback: asset_path("no_image.jpeg") %></p>
+          </div>
+            <div class="col-lg-12 col-sm-5">
+              <% if @user.id == current_user.id %>
+               <p><i class="fas fa-user-edit"></i><%= link_to "プロフィール編集", edit_user_path(@user), class: "btn btn-success " %></p>
+               <p><i class="fas fa-sign-out-alt"></i><%= link_to "退会", users_confirm_path, class: "btn btn-danger" %></p>
+               <p><i class="fas fa-comment-dots"></i><%= link_to "銘柄新規投稿" , new_brand_path , class: "btn btn-warning" %></p>
+              <% end %>
+            </div>
         </div>
       </div>
     </div>
 <!--いいね一覧-->
-    <div class="col-8">
+    <div class="col-lg-8">
       <div class="row">
         <h3>いいね一覧</h3>
         <div class="container">
