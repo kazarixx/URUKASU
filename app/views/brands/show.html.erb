@@ -7,10 +7,10 @@
   </h3>
     <!--上部-->
     <div class="row">
-      <div class="col-4 offset-md-1">
+      <div class="col-lg-3 col-md-5 offset-md-1 col-sm-5">
         <div class="img-top-ground"><%= attachment_image_tag @brand, :brand_image, size: '300x300',fallback: asset_path("no_image.jpeg"), class:"brand-image" %></div>
       </div>
-      <div class ="col-7">
+      <div class ="col-lg-8 col-md-6 col-sm-6">
         <table class="table">
           <tbody>
             <tr>
@@ -47,9 +47,9 @@
     </div>
     <!--コメント投稿欄-->
     <div class="row">
-      <div class="col-11 offset-md-1">
+      <div class="col-lg-11 col-sm-11 offset-md-1">
         <%= form_with model:[@brand, @comment], remote: true do |f| %>
-          <%= f.text_area :comment, rows:'5', placeholder: "何かコメントをしてみよう",class: "form-control"%>
+          <%= f.text_area :comment, rows:'5', placeholder: "何かコメントをしてみよう",class: "form-control col-12"%>
           <div id="rating-form">
             <%= f.label :rate%>
             <%= f.hidden_field :rate, :value => 'score' %>

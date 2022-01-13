@@ -58,17 +58,10 @@ footer{
  height: 100px ;
 }
 
+// ヘッダー
 h3{
   padding: 20px;
   background-color: #FCF8E8;
   border-left: 6px solid #DF7861;
 }
 
- @media (max-width:1200px) {
-   .container{
-   display: flex; /* 子要素をflexboxで揃える */
-   flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
-   justify-content: center; /* 子要素をflexboxにより中央に配置する */
-   align-items: center;  /* 子要素をflexboxにより中央に配置する */
-  }
- }
